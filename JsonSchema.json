@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/product.schema.json",
+    "title": "Usuarios",
+    "description": "Colecao de Usuarios",
+    "type": "object",
+    "properties": {
+        "usuarioId": {
+            "description": "Indentificador de usuario",
+            "type": "integer"
+        },
+        "nome": {
+            "description": "Nome do Usuario",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 80
+        },
+        "email": {
+            "description": "Email do usuario",
+            "type": "string",
+            "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}"
+        },
+        "idade": {
+            "description": "Idade do usuario",
+            "type": "string",
+            "minimum": 18,
+            "maximum": 100
+        },
+        "login": {
+            "description": "Nome de login do usuario",
+            "type": "string"
+        },
+        "senha": {
+            "description": "Senha do usuario",
+            "type": "string",
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$",
+            "minLength": 8,
+            "maxLength": 20
+        },
+        "ativo": {
+            "description": "Verifica se o usuario esta ativo",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "usuarioId",
+        "nome",
+        "email",
+        "login",
+        "senha"
+    ]
+}
