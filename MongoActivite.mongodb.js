@@ -1,65 +1,65 @@
 // 1) Crie um banco de dados no MongoDB chamado “db_atividades”.
-// use ('dbAtividade')
+use ('dbAtividade')
 
 // 2) Dentro de “db_atividades”, crie uma collection chamada “contatos”.
-// db.createCollection('contatos')
+db.createCollection('contatos')
 
 // a) Insira individualmente 3 novos contatos de modo que eles possuam os nomes “Ana Silva”, “Carlos Ferraz” e “Bruno Almeida”, além de valores nos campos “telefone” e “email”.
-// db.contatos.insertOne({
-//     nome:"Ana Silva",
-//     telefone:"12232133",
-//     email:"anasilva@gmail.com"
-// })
-// db.contatos.insertOne({
-//     nome:"Carlos Ferraz",
-//     telefone:"17676763",
-//     email:"carlosferraz@gmail.com"
-// })
-// db.contatos.insertOne({
-//     nome:"Bruno Almeida",
-//     telefone:"989878788",
-//     email:"brunoalmeida@gmail.com"
-// })
+db.contatos.insertOne({
+    nome:"Ana Silva",
+    telefone:"12232133",
+    email:"anasilva@gmail.com"
+})
+db.contatos.insertOne({
+    nome:"Carlos Ferraz",
+    telefone:"17676763",
+    email:"carlosferraz@gmail.com"
+})
+db.contatos.insertOne({
+    nome:"Bruno Almeida",
+    telefone:"989878788",
+    email:"brunoalmeida@gmail.com"
+})
 
 // b) Insira de uma vez 4 novos contatos de modo que possuam os nomes “Lucas Oliveira”, “Mateus Ferreira”, “Viviane Santos” e “Franciele Souza”.
-// db.contatos.insertMany([
-//     {
-//     nome:"Lucas Oliveira",
-//     telefone:"0987876",
-//     email:"lucasoliveira@gmail.com"
-//     },
-//     {
-//     nome:"Mateus Ferreira",
-//     telefone:"8767767",
-//     email:"mateusferreira@gmail.com"
-//     },
-//     {
-//     nome:"Viviane Santos",
-//     telefone:"232321",
-//     email:"vivianesantos@gmail.com"
-//     },
-//     {
-//     nome:"Franciele Souza",
-//     telefone:"988877",
-//     email:"francielesouza@gmail.com"
-//     },
-// ])
+db.contatos.insertMany([
+    {
+    nome:"Lucas Oliveira",
+    telefone:"0987876",
+    email:"lucasoliveira@gmail.com"
+    },
+    {
+    nome:"Mateus Ferreira",
+    telefone:"8767767",
+    email:"mateusferreira@gmail.com"
+    },
+    {
+    nome:"Viviane Santos",
+    telefone:"232321",
+    email:"vivianesantos@gmail.com"
+    },
+    {
+    nome:"Franciele Souza",
+    telefone:"988877",
+    email:"francielesouza@gmail.com"
+    },
+])
 
 // c) Atualize individualmente os e-mails de Mateus e Viviane.
-// db.contatos.updateOne(
-//     {nome:"Mateus Ferreira"},
-//     {$set: {email:"mateusdograu@hotmail.com"}}
-// )
-// db.contatos.updateOne(
-//     {nome:"Viviane Santos"},
-//     {$set: {email:"vividoSanto@yahool.com"}}
-// )
+db.contatos.updateOne(
+    {nome:"Mateus Ferreira"},
+    {$set: {email:"mateusdograu@hotmail.com"}}
+)
+db.contatos.updateOne(
+    {nome:"Viviane Santos"},
+    {$set: {email:"vividoSanto@yahool.com"}}
+)
 
 // d) Atualize individualmente Ana alterando seu telefone.
-// db.contatos.updateOne(
-//     {nome:"Ana Silva"}, 
-//     {$set: {telefone:"1699746309"}}
-// )
+db.contatos.updateOne(
+    {nome:"Ana Silva"}, 
+    {$set: {telefone:"1699746309"}}
+)
 
 // e) Atualize todos os contatos de uma vez de modo que passem a ter um campo chamado “tags” com o valor “faculdade”.
 db.contatos.updateMany(
